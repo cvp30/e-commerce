@@ -1,5 +1,5 @@
 import Carousel from "../../components/Carousel/Carousel";
-import Products from "../../components/Products/Products";
+import ProductsSlider from "../../Layouts/ProductsSlider";
 
 const Home = () => {
 
@@ -7,8 +7,7 @@ const Home = () => {
         <div className="mx-auto w-full h-full">
 
             <Carousel />
-
-            <Products />
+            <ProductsSlider />
         </div>
       )
 }
