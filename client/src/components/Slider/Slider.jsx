@@ -39,7 +39,7 @@ const Slider = ({products}) => {
             spaceBetween: 30,
           },
           1440: {
-            slidesPerView: 3,
+            slidesPerView: 5,
             spaceBetween: 20,
           },
         }}

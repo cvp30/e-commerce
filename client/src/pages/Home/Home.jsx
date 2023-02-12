@@ -1,4 +1,5 @@
 import Carousel from "../../components/Carousel/Carousel";
+import Footer from "../../components/Footer/Footer";
 import ProductsSlider from "../../Layouts/ProductsSlider";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
 
             <Carousel />
             <ProductsSlider />
+            <Footer />
         </div>
       )
 }
