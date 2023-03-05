@@ -6,14 +6,10 @@ import logo from '../assets/logo.png'
 
 const NavBar = () => {
 
-  const handleMode = e => {
-    document.documentElement.classList.toggle("dark");
-  }
-
   return (
     <>
-      <header className="bg-background dark:bg-principal  px-5 py-1">
-        <div className="flex justify-between items-center mt-1 h-20 w-full max-w-screen-2xl mx-auto">
+      <header className="bg-background dark:bg-principal  pt-1">
+        <div className="flex justify-between items-center mt-1 px-5 h-20 w-full max-w-screen-2xl mx-auto">
           <Link className="h-full" to='/'>
             <img className="h-full" src={logo} alt="" />
           </Link>
@@ -24,7 +20,6 @@ const NavBar = () => {
         </div>
 
         <Categories />
-        <button onClick={handleMode} className="">dark</button>
 
       </header>
 

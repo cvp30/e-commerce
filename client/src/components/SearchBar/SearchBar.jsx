@@ -3,7 +3,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 const SearchBar = () => {
   return (
-    <div className='border-2 border-principal flex items-center rounded-lg w-2/5 bg-white'>
+    <div className='border-2 border-principal text-sm flex items-center rounded-lg w-2/5 bg-white'>
 
       <select
         className='outline-0 rounded-l-lg w-72 h-full p-3 '

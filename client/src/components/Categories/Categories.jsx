@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 
 const Categories = () => {
 
-  const style = ({isActive}) => isActive? 'text-selected pointer-events-none':'text-principal dark:text-white'
+  const style = ({isActive}) => isActive? 'text-orange pointer-events-none':'text-principal hover:text-orange dark:text-white'
   return (
-    <div className=" flex justify-center gap-32 py-1 font-medium text-sm tracking-wider">
+    <div className="w-full flex justify-center gap-32 py-1 font-bold text-sm tracking-wider">
       <NavLink  
         to="/detail" 
         className={style}
