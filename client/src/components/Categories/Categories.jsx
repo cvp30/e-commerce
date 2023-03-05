@@ -2,32 +2,34 @@ import { NavLink } from "react-router-dom";
 
 
 const Categories = () => {
+
+  const style = ({isActive}) => isActive? 'text-selected pointer-events-none':'text-principal dark:text-white'
   return (
-    <div className=" flex justify-center gap-32 py-1 font-medium text-lg text-white">
+    <div className=" flex justify-center gap-32 py-1 font-medium text-sm tracking-wider">
       <NavLink  
-        to="/electronics" 
-        className={({isActive}) => isActive? "text-[#c3c5c9] pointer-events-none":""}
+        to="/detail" 
+        className={style}
       >
         Electronics
       </NavLink>
 
       <NavLink  
         to="/jewelery"
-        className={({isActive}) => isActive? "text-[#737B87] pointer-events-none":""}  
+        className={style}
       >
         Jewelery
       </NavLink>
 
       <NavLink  
         to="/men"
-        className={({isActive}) => isActive? "text-[#737B87] pointer-events-none":""}
+        className={style}
       >
         Men's clothing
       </NavLink>
 
       <NavLink  
         to="/women"
-        className={({isActive}) => isActive? "text-[#737B87] pointer-events-none":""}
+        className={style}
       >
         Women's clothing
       </NavLink>

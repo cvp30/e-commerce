@@ -18,7 +18,7 @@ const Slider = ({products}) => {
         keyboard={{
           enabled: true,
         }}
-        className="mySwiper m-4 justify-center w-full"
+        className="mySwiper py-4 justify-center w-full"
         breakpoints={{
           0: {
             slidesPerView: 1,

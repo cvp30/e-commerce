@@ -1,29 +1,26 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faHeart, faBagShopping, faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
-import { Avatar } from 'flowbite-react';
 
 const MenuBar = () => {
 
   const linkClass = 'flex flex-col justify-center items-center';
-  const fontClass = ' text-white text-3xl rounded-full';
-  const parClass = ' text-white ont-bold text-base'; 
+  const fontClass = '  text-xl';
+  const parClass = '  font-bold text-sm'; 
 
   
   return (
-    <div className='flex gap-10'>
+    <div className='flex gap-10 text-principal dark:text-white'>
       <Link to='' className={linkClass}>
         <FontAwesomeIcon className={fontClass} icon={faHeart} />
-        {/* <Avatar status='away' statusPosition='bottom-right'/> */}
-
         <p className={parClass}>orders</p>
       </Link>
 
       <Link to='' className={linkClass}>
-        <div className='relative'>
+        <div className='relative '>
           <FontAwesomeIcon className={fontClass} icon={faCartShopping} />
           <p
-            className='bg-orange rounded-full w-6 h-6 text-center text-white bottom-0 right-0 translate-x-1/4 translate-y-1/4 font-semibold absolute'
+            className='text-sm  rounded-full w-6 h-6 flex justify-center items-center text-orange -top-3 -right-5  font-bold absolute'
           >
             0
           </p>
