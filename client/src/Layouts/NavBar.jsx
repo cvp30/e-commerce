@@ -9,8 +9,8 @@ const NavBar = () => {
   return (
     <>
       <header className="bg-background dark:bg-principal  pt-1">
-        <div className="flex justify-between items-center mt-1 px-5 h-20 w-full max-w-screen-2xl mx-auto">
-          <Link className="h-full" to='/'>
+        <div className="flex justify-between items-center mt-1 px-5  h-20 w-full max-w-screen-2xl mx-auto">
+          <Link className="box-border w-28 " to='/'>
             <img className="h-full" src={logo} alt="" />
           </Link>
 

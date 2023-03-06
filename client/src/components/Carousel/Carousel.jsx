@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination, Autoplay } from "swiper";
+import { Navigation, Pagination} from "swiper";
 
 const Carousel = () => {
 
@@ -14,31 +14,57 @@ const Carousel = () => {
   ]
 
   return (
-    <div className="h-112 w-full  m-auto dark:bg-principal">
-      <Swiper
-        cssMode={true}
-        freeMode={true}
-        autoplay={{
-          delay: 3000,
-        }}
-        modules={[Navigation, Autoplay, Pagination]}
-        className="mySwiper w-full h-full max-w-screen-2xl"
-      >
-        {
-          urlImages.map((img, key) => {
-            return (
-              <SwiperSlide key={key} className="">
-                <img
-                  className="h-full w-full"
-                  src={img}
-                />
-              </SwiperSlide>
-            )
-          })
-        }
+    <div className="bg-background box-border  gap-4 h-112 w-full max-w-screen-2xl px-8 py-4 m-auto dark:bg-principal grid grid-cols-3 grid-rows-2">
+      <div className="row-span-2 col-span-2 rounded-xl overflow-hidden shadow-xl shadow-[rgba(0,0,0,.1)]">
+        <Swiper
+          speed={2000}
+          loop={true}
+          spaceBetween={10}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className="mySwiper w-full h-full"
+        >
+          {
+            urlImages.map((img, key) => {
+              return (
+                <SwiperSlide key={key} className="">
+                  <img
+                    className="h-full w-full"
+                    src={img}
+                  />
+                </SwiperSlide>
+              )
+            })
+          }
 
 
-      </Swiper>
+        </Swiper>
+      </div>
+      <div className="relative group rounded-xl p-4 cursor-pointer bg-white shadow-xl shadow-[rgba(0,0,0,.1)]">
+        <div className="group-hover:bg-[rgba(0,0,0,.1)]  absolute rounded-xl top-0 left-0 w-full h-full"></div>
+        <img className="h-full" src="https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg" />
+
+        <div className="w-1/3 absolute top-10 right-4 flex flex-col items-center ">
+          <p className="text-orange text-sm">ELECTRONICS</p>
+          <p className="text-center text-lg font-semibold px-2">Bright & realistic QLED shades</p>
+        </div>
+
+      </div>
+      <div className="relative group rounded-xl p-4 cursor-pointer bg-white shadow-xl shadow-[rgba(0,0,0,.1)]">
+        <div className="group-hover:bg-[rgba(0,0,0,.1)]  absolute rounded-xl top-0 left-0 w-full h-full"></div>
+        <img className="h-full" src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" />
+
+        <div className="w-1/3 absolute top-10 right-4 flex flex-col items-center ">
+          <p className="text-orange text-sm">MEN'S CLOTHING</p>
+          <p className="text-center text-lg font-semibold px-2">Exclusive Clothing for Men</p>
+        </div>
+
+      </div>
+
+
     </div>
   )
 }
