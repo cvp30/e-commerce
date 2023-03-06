@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination} from "swiper";
+import { Navigation, Pagination, Autoplay} from "swiper";
 
 const Carousel = () => {
 
@@ -17,14 +17,17 @@ const Carousel = () => {
     <div className="bg-background box-border  gap-4 h-112 w-full max-w-screen-2xl px-8 py-4 m-auto dark:bg-principal grid grid-cols-3 grid-rows-2">
       <div className="row-span-2 col-span-2 rounded-xl overflow-hidden shadow-xl shadow-[rgba(0,0,0,.1)]">
         <Swiper
-          speed={2000}
+          speed={700}
           loop={true}
           spaceBetween={10}
           pagination={{
             clickable: true,
           }}
+          autoplay={{
+            delay: 2000,
+          }}
           navigation={true}
-          modules={[Pagination, Navigation]}
+          modules={[Pagination, Navigation, Autoplay]}
           className="mySwiper w-full h-full"
         >
           {
