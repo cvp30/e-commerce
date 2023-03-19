@@ -17,8 +17,8 @@ const ProductsSlider = () => {
 
   return (
     <div className='pt-8 flex flex-col gap-4 items-center bg-background dark:bg-principal'>
-      <h1 className='text-6xl font-bold text-principal dark:text-white'>
-        Our Products
+      <h1 className='font-bold text-principal dark:text-white'>
+        Featured Products
       </h1>
 
       <Slider products={products}/>

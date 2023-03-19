@@ -1,7 +1,6 @@
 import ProductCard from '../ProductCard/ProductCard';
-import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Keyboard, Autoplay } from "swiper";
+import {  Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
 
@@ -9,16 +8,13 @@ const Slider = ({products}) => {
   return (
     <Swiper
         speed={2000}
-        freeMode={true}
-        grabCursor={true}
-        modules={[Autoplay, Keyboard]}
+
+        modules={[Autoplay]}
         autoplay={{
           delay: 3000,
         }}
-        keyboard={{
-          enabled: true,
-        }}
-        className="mySwiper py-4 justify-center w-full"
+
+        className="mySwiper py-4 justify-center w-full max-w-screen-2xl"
         breakpoints={{
           0: {
             slidesPerView: 1,
@@ -31,11 +27,11 @@ const Slider = ({products}) => {
             centeredSlides: true,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 10,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 30,
           },
           1440: {
@@ -48,14 +44,12 @@ const Slider = ({products}) => {
           products.map(product => {
             return (
               <SwiperSlide key={product.id}>
-                <Link to={`product/${product.id}`}>
                   <ProductCard
                     title={product.title}
                     price={product.price}
                     image={product.image}
                     rating={product.rating.rate}
                   />
-                </Link>
               </SwiperSlide>
             )
           })

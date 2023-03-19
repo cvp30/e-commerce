@@ -12,12 +12,21 @@
   h3 {
     @apply text-xl;
   }
+  html {
+    background: #f8f8f8;
+  }
+
+  .dark{
+  background-color: #222831;
+}
 }
 
 @layer components {
   
   
 }
-.dark{
-  background-color: #222831;
+
+input[type="number"]:not([step="any"])::-webkit-inner-spin-button,
+input[type="number"]:not([step="any"])::-webkit-outer-spin-button {
+  opacity: 1;
 }

@@ -14,8 +14,8 @@ const Carousel = () => {
   ]
 
   return (
-    <div className="bg-background box-border  gap-4 h-112 w-full max-w-screen-2xl px-8 py-4 m-auto dark:bg-principal grid grid-cols-3 grid-rows-2">
-      <div className="row-span-2 col-span-2 rounded-xl overflow-hidden shadow-xl shadow-[rgba(0,0,0,.1)]">
+    <div className="bg-background box-border gap-4 h-96 xl:h-112 w-full max-w-screen-2xl px-8 py-4 m-auto dark:bg-principal grid grid-cols-3 grid-rows-2">
+      <div className="row-span-2 col-span-2 border rounded-xl overflow-hidden shadow-xl shadow-[rgba(0,0,0,.1)]">
         <Swiper
           speed={700}
           loop={true}
@@ -46,7 +46,8 @@ const Carousel = () => {
 
         </Swiper>
       </div>
-      <div className="relative group rounded-xl p-4 cursor-pointer bg-white shadow-xl shadow-[rgba(0,0,0,.1)]">
+
+      <div className="border border-[#dedfe2] relative group rounded-xl p-4 cursor-pointer bg-white shadow-xl shadow-[rgba(0,0,0,.1)]">
         <div className="group-hover:bg-[rgba(0,0,0,.1)]  absolute rounded-xl top-0 left-0 w-full h-full"></div>
         <img className="h-full" src="https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg" />
 
@@ -56,7 +57,7 @@ const Carousel = () => {
         </div>
 
       </div>
-      <div className="relative group rounded-xl p-4 cursor-pointer bg-white shadow-xl shadow-[rgba(0,0,0,.1)]">
+      <div className="border border-[#dedfe2] relative group rounded-xl p-4 cursor-pointer bg-white shadow-xl shadow-[rgba(0,0,0,.1)]">
         <div className="group-hover:bg-[rgba(0,0,0,.1)]  absolute rounded-xl top-0 left-0 w-full h-full"></div>
         <img className="h-full" src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" />
 

@@ -3,30 +3,31 @@ import { faTruckFast, faDollarSign, faShieldHalved } from '@fortawesome/free-sol
 
 const Services = () => {
 
-  const box = "shadow-md shadow-principal dark:shadow-white h-full w-72 h-5/6 flex justify-center items-center gap-8";
+  const iconStyle = 'text-orange w-16 h-12 box-border p-2 ';
+  const box = " dark:shadow-white text-white h-full w-72 h-2/3 px-1 flex justify-center items-center gap-3";
   return (
-    <div className="box-border flex justify-around items-center gap-16 bg-background dark:bg-principal h-36 w-full max-w-screen-2xl m-auto">
+    <div className="box-border flex justify-around items-center gap-16 bg-principal dark:bg-principal  h-28 w-full max-w-screen-2xl m-auto">
       <div className={box}>
-        <FontAwesomeIcon className='text-orange' size='2xl' icon={faTruckFast}/>
+        <FontAwesomeIcon className={iconStyle}  icon={faTruckFast}/>
         <div>
-          <p className='font-bold dark:text-white'>Free Shipping</p>
-          <p className='text-slate'>Free deliver over $100</p>
+          <p className='font-semibold'>Free Shipping</p>
+          <p className='text-slate text-sm'>Free deliver over $100</p>
         </div>
       </div>
 
       <div className={box}>
-        <FontAwesomeIcon className='text-orange' size='2xl' icon={faDollarSign}/>
+        <FontAwesomeIcon className={iconStyle} icon={faDollarSign}/>
         <div>
-          <p className='font-bold dark:text-white'>Money Back Guarantee</p>
-          <p className='text-slate'>100% money back guarantee</p>
+          <p className='font-semibold'>Money Back Guarantee</p>
+          <p className='text-slate text-sm'>100% money back guarantee</p>
         </div>
       </div>
 
       <div className={box}>
-        <FontAwesomeIcon className='text-orange' size='2xl' icon={faShieldHalved}/>
+        <FontAwesomeIcon className={iconStyle} icon={faShieldHalved}/>
         <div>
-          <p className='font-bold dark:text-white'>Secure Shopping</p>
-          <p className='text-slate'>Best security features</p>
+          <p className='font-semibold'>Secure Shopping</p>
+          <p className='text-slate text-sm'>Best security features</p>
         </div>
       </div>
 
