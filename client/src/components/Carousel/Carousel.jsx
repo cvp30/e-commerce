@@ -42,8 +42,6 @@ const Carousel = () => {
               )
             })
           }
-
-
         </Swiper>
       </div>
 

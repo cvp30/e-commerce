@@ -7,7 +7,7 @@ const Categories = () => {
   return (
     <div className="w-full border-t-2 border-b-2 border-principal dark:border-orange flex justify-center gap-32 py-1 font-bold text-sm tracking-wider">
       <NavLink  
-        to="/detail" 
+        to="/electronics" 
         className={style}
       >
         Electronics

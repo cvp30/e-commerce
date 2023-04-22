@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import NavBar from '../Layouts/NavBar'
 import Home from '../pages/Home/Home'
-import ProductDetail from '../pages/ProductDetail/ProductDetail'
+import Electronics from '../pages/ProductDetail/Electronics'
 
 export const router = createBrowserRouter ([
     {
@@ -13,10 +13,10 @@ export const router = createBrowserRouter ([
                 index: true,
                 element: <Home />
             },
-            {
-                path: 'detail',
-                element: <ProductDetail />
-            }
+            // {
+            //     path: 'electronics',
+            //     element: <Electronics />
+            // }
         ]
     },
 

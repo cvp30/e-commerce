@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom/client'
 
 import { router } from './router'
 import { RouterProvider } from 'react-router-dom'
-// import { Provider } from 'react-redux'
+import { Provider } from 'react-redux'
+import store from './redux/store'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <Provider >
+  <Provider store={ store }>
     <RouterProvider router={router}/>
-  // </Provider>
+  </Provider>
 )
