@@ -15,13 +15,15 @@ module.exports = {
         '112': '28rem',
         '108': '27rem',
         '26': '6.4rem',
+        '90': '22.5rem',
       }
     },
     colors:{
       'header': '#15161D',
       'red': '#D10024',
       'white': '#ffffff',
-
+      'target': '#E4E7ED',
+      
       'principal': '#222831',
       'orange': '#FE661F',
       'background': '#f8f8f8',
