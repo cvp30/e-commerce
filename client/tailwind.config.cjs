@@ -18,13 +18,14 @@ module.exports = {
         '90': '22.5rem',
       }
     },
-    colors:{
+    colors: {
       'header': '#15161D',
       'red': '#D10024',
       'white': '#ffffff',
       'target': '#E4E7ED',
-      
-      'principal': '#222831',
+      'principal': '#2B2D42',
+
+      // 'principal': '#222831',
       'orange': '#FE661F',
       'background': '#f8f8f8',
       'slate': '#737B87',
