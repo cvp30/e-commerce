@@ -7,26 +7,27 @@
   h1 {
     @apply text-4xl;
   }
+
   h2 {
     @apply text-2xl;
   }
+
   h3 {
     @apply text-xl;
   }
+
   html {
     background: #f8f8f8;
     font-family: 'Alkatra', cursive;
-  } 
+  }
 
-  .dark{
-  background-color: #222831;
-}
+  .dark {
+    background-color: #222831;
+  }
+
 }
 
-@layer components {
-  
-  
-}
+@layer components {}
 
 input[type="number"]:not([step="any"])::-webkit-inner-spin-button,
 input[type="number"]:not([step="any"])::-webkit-outer-spin-button {

@@ -3,6 +3,8 @@ import Footer from "../../components/Footer/Footer";
 import Services from "../../components/Services/Services";
 import ProductsSlider from "../../Layouts/ProductsSlider";
 
+import ProductCard from "../../components/ProductCard";
+
 import Jewelery from '../../assets/jewelery.png'
 import Electronics from '../../assets/Electronics.png'
 import Men from '../../assets/Men.png'
@@ -55,8 +57,10 @@ const Home = () => {
       <div className="w-full text-principal pt-16">
         <p className="text-3xl font-bold">NEW PRODUCTS</p>
 
-
+        <ProductCard />
       </div>
+
+      <div className="w-full h-60"></div>
 
 
     </section>
