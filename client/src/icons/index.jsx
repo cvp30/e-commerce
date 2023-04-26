@@ -8,7 +8,7 @@ export const Search = (props) => {
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={2} 
+      strokeWidth={2}
       {...props}
     >
       <path stroke="none" d="M0 0h24v24H0z" />
@@ -25,7 +25,7 @@ export const Heart = (props) => {
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={2} 
+      strokeWidth={2}
       viewBox="0 0 24 24"
       {...props}
     >
@@ -52,6 +52,24 @@ export const CarShopping = (props) => {
       <path d="M4 19a2 2 0 1 0 4 0 2 2 0 1 0-4 0M15 19a2 2 0 1 0 4 0 2 2 0 1 0-4 0" />
       <path d="M17 17H6V3H4" />
       <path d="m6 5 14 1-1 7H6" />
+    </svg>
+  )
+}
+
+export const Compare = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <path d="M21 17H3M6 10 3 7l3-3M3 7h18M18 20l3-3-3-3" />
     </svg>
   )
 }
