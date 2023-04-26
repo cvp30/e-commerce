@@ -17,13 +17,14 @@
   }
 
   html {
-    background: #f8f8f8;
+    /* background: #f8f8f8; */
     font-family: 'Alkatra', cursive;
   }
 
+  /* 
   .dark {
     background-color: #222831;
-  }
+  } */
 
 }
 

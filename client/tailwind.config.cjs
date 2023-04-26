@@ -24,9 +24,10 @@ module.exports = {
       'white': '#ffffff',
       'target': '#E4E7ED',
       'principal': '#2B2D42',
-      'silver': '#d6d6d6',
+      'silver': '#e6e6e6',
       'dark': '#1e1f29',
-      // 'principal': '#222831',
+
+      'principal': '#222831',
       'orange': '#FE661F',
       'background': '#f8f8f8',
       'slate': '#737B87',

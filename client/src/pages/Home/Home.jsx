@@ -4,11 +4,13 @@ import Services from "../../components/Services/Services";
 import ProductsSlider from "../../Layouts/ProductsSlider";
 
 import ProductCard from "../../components/ProductCard";
-
 import Jewelery from '../../assets/jewelery.png'
 import Electronics from '../../assets/Electronics.png'
 import Men from '../../assets/Men.png'
 import { Link } from "react-router-dom";
+import ProductCards from "../../components/ProductCards";
+import Qled from "../../assets/qled.png"
+import Portable from "../../assets/portable.png";
 
 const Home = () => {
 
@@ -32,9 +34,9 @@ const Home = () => {
     <section className="w-full h-full mx-auto py-10">
       <div className="flex gap-8 md:gap-16 flex-wrap items-center justify-center xl:justify-between">
         {
-          categories.map(category => {
+          categories.map((category, key) => {
             return (
-              <div className="overflow-hidden relative xl:w-90 md:w-80 w-72 aspect-[3/2] bg-target flex justify-center group">
+              <div key={key} className="overflow-hidden relative xl:w-90 md:w-80 w-72 aspect-[3/2] bg-target flex justify-center group">
                 <img className="h-full group-hover:h-[110%] transition-all duration-300" src={category.img} alt={category.name} />
                 <div className="absolute -left-14 -top-44 w-64 h-112 rotate-45 bg-[#d10023] opacity-90"></div>
                 <div
@@ -48,19 +50,52 @@ const Home = () => {
                   </Link>
                 </div>
               </div>
-
             )
           })
         }
       </div>
 
-      <div className="w-full text-principal pt-16">
+      <div className="w-full text-principal pt-16 flex flex-col items-start">
         <p className="text-3xl font-bold">NEW PRODUCTS</p>
-
-        <ProductCard />
+        <ProductCards />
       </div>
 
-      <div className="w-full h-60"></div>
+      <section className="w-full h-90 my-14 bg-silver flex items-center justify-between">
+        <figure className="w-1/3 h-full pr-4 flex justify-center">
+          <img src={Qled} className="w-full" alt="" />
+        </figure>
+
+        <div className="w-1/3 h-full flex flex-col items-center justify-around text-dark tracking-widest">
+          <div className="w-full h-28 flex justify-between items-center tracking-widest text-white">
+            <div className="w-24 h-24 rounded-full flex flex-col items-center justify-center bg-red">
+              <p className="text-2xl">02</p>
+              <p className="text-xs">DAYS</p>
+            </div>
+            <div className="w-24 h-24 flex flex-col items-center justify-center bg-red rounded-full">
+              <p className="text-2xl">11</p>
+              <p className="text-xs">HOURS</p>
+            </div>
+            <div className="w-24 h-24 flex flex-col items-center justify-center bg-red rounded-full">
+              <p className="text-2xl">50</p>
+              <p className="text-xs">MINS</p>
+            </div>
+            <div className="w-24 h-24 flex flex-col items-center justify-center bg-red rounded-full">
+              <p className="text-2xl">22</p>
+              <p className="text-xs">SECS</p>
+            </div>
+          </div>
+
+          <p className="font-bold text-4xl">HOT DEAL THIS WEEK</p>
+          <p className="text-2xl">NEW COLLECTION UP TO 50% OFF</p>
+
+          <button className="py-3 px-7 bg-red text-white rounded-3xl ">SHOP NOW</button>
+        </div>
+
+        <figure className="w-1/3 h-full flex justify-center items-center">
+          <img src={Portable} className="h-full" alt="" />
+        </figure>
+
+      </section>
 
 
     </section>

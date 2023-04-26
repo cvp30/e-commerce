@@ -1,32 +1,31 @@
 import StarRatings from "react-star-ratings";
 import { CarShopping, Heart, Compare } from "../icons";
 
-const ProductCard = () => {
+const ProductCard = ({ image, category, title, price, rating }) => {
   return (
     <div className=" box-border w-72 h-112 outline outline-1 outline-silver hover:outline-2 hover:outline-red relative flex flex-col group after:absolute after:w-full after:h-full after:top-0 after:-z-10 after:bg-white   transition duration-250 ease-in-out">
 
       <figure className="box-border w-full h-1/2 flex items-center justify-center">
-        <img className="h-[90%] box-border " src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="" />
+        <img className="h-[90%] box-border " src={image} alt="" />
       </figure>
 
-      <div className="bg-[yellow w-full h-1/2 flex flex-col items-center justify-between">
+      <div className="bg-[yellow w-full h-[35%] flex flex-col items-center justify-between">
         <p className="text-[#8D99AE] text-sm font-normal">
-          CATEGORY
+          {category}
         </p>
-        <p className="text-dark text-lg font-bold">
-          PRODUCT NAME HERE
+        <p className="w-full text-center truncate text-dark text-lg font-bold">
+          {title}
         </p>
         <div className="w-full flex justify-center items-center gap-2">
           <p className="text-red font-bold text-xl before:content-['$_']">
-            {/* {Number.parseFloat(price).toFixed(2) } */}
-            100.00
+            {Number.parseFloat(price).toFixed(2)}
           </p>
           <p className="text-[#8D99AE] text-sm before:content-['$_'] line-through">
             999.00
           </p>
         </div>
         <StarRatings
-          rating={4}
+          rating={rating}
           // changeRating={chageRating}
           starDimension="1rem"
           starSpacing="0px"
@@ -45,7 +44,7 @@ const ProductCard = () => {
 
       </div>
 
-      <div className="w-full h-20 flex items-center justify-center box-border">
+      <div className="w-full h-[15%] flex items-center justify-center box-border">
         <button className="bg-red border-2 border-red gap-0 hover:gap-3 text-white h-12 w-36 hover:w-44 flex items-center justify-center rounded-3xl  hover:bg-white hover:text-red transition-all duration-200 ease-in-out">
           <CarShopping className="h-5 text-red" />
           <p className="font-bold">ADD TO CART</p>
