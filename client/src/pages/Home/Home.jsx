@@ -1,9 +1,4 @@
-import Carousel from "../../components/Carousel/Carousel";
-import Footer from "../../components/Footer/Footer";
-import Services from "../../components/Services/Services";
-import ProductsSlider from "../../Layouts/ProductsSlider";
 
-import ProductCard from "../../components/ProductCard";
 import Jewelery from '../../assets/jewelery.png'
 import Electronics from '../../assets/Electronics.png'
 import Men from '../../assets/Men.png'
@@ -78,13 +73,13 @@ const Home = () => {
         <ProductCards />
       </div>
 
-      <section className="w-full h-90 my-14 bg-silver flex items-center justify-between">
-        <figure className="w-1/3 h-full pr-4 flex justify-center">
+      <section className="w-full h-full py-6 my-14 bg-silver flex items-center justify-between">
+        <figure className="hidden md:w-1/2 lg:w-1/3 h-90 pr-4 md:flex justify-center">
           <img src={Qled} className="w-full" alt="" />
         </figure>
 
-        <div className="w-1/3 h-full flex flex-col items-center justify-around text-dark tracking-widest">
-          <div className="w-full h-28 flex justify-center items-center gap-2 flex-wrap  tracking-widest text-white">
+        <div className="w-full md:w-1/2 lg:w-1/3 h-full flex gap-8 flex-col items-center justify-around text-dark tracking-widest">
+          <div className="w-full flex justify-center items-center gap-2 flex-wrap  tracking-widest text-white">
             {
               Countdown.map((elem, key) => {
                 return (
@@ -97,17 +92,19 @@ const Home = () => {
             }
           </div>
 
-          <p className=" font-bold text-4xl">HOT SALE THIS WEEK</p>
-          <p className="text-2xl">NEW COLLECTION UP TO 50% OFF</p>
+          <p className=" font-bold text-4xl text-center">HOT SALE THIS WEEK</p>
+          <p className="text-2xl text-center">NEW COLLECTION UP TO 50% OFF</p>
 
           <button className="py-3 px-7 bg-red text-white rounded-3xl ">SHOP NOW</button>
         </div>
 
-        <figure className="w-1/3 h-full flex justify-center items-center">
+        <figure className="hidden w-1/3 h-90 lg:flex justify-center items-center">
           <img src={Portable} className="h-full" alt="" />
         </figure>
 
       </section>
+
+      <p className="text-3xl font-bold">TOP SELLING</p>
 
 
     </section>
