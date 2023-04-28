@@ -29,6 +29,24 @@ const Home = () => {
     },
 
   ]
+  const Countdown = [
+    {
+      time: "DAYS",
+      number: 2,
+    },
+    {
+      time: "HOURS",
+      number: 11,
+    },
+    {
+      time: "MINS",
+      number: 50,
+    },
+    {
+      time: "SECS",
+      number: 22,
+    },
+  ]
 
   return (
     <section className="w-full h-full mx-auto py-10">
@@ -66,26 +84,20 @@ const Home = () => {
         </figure>
 
         <div className="w-1/3 h-full flex flex-col items-center justify-around text-dark tracking-widest">
-          <div className="w-full h-28 flex justify-between items-center tracking-widest text-white">
-            <div className="w-24 h-24 rounded-full flex flex-col items-center justify-center bg-red">
-              <p className="text-2xl">02</p>
-              <p className="text-xs">DAYS</p>
-            </div>
-            <div className="w-24 h-24 flex flex-col items-center justify-center bg-red rounded-full">
-              <p className="text-2xl">11</p>
-              <p className="text-xs">HOURS</p>
-            </div>
-            <div className="w-24 h-24 flex flex-col items-center justify-center bg-red rounded-full">
-              <p className="text-2xl">50</p>
-              <p className="text-xs">MINS</p>
-            </div>
-            <div className="w-24 h-24 flex flex-col items-center justify-center bg-red rounded-full">
-              <p className="text-2xl">22</p>
-              <p className="text-xs">SECS</p>
-            </div>
+          <div className="w-full h-28 flex justify-center items-center gap-2 flex-wrap  tracking-widest text-white">
+            {
+              Countdown.map((elem, key) => {
+                return (
+                  <div key={key} className="w-24 h-24 rounded-full flex flex-col items-center justify-center bg-red">
+                    <p className="text-2xl">{elem.number}</p>
+                    <p className="text-xs">{elem.time}</p>
+                  </div>
+                )
+              })
+            }
           </div>
 
-          <p className="font-bold text-4xl">HOT DEAL THIS WEEK</p>
+          <p className=" font-bold text-4xl">HOT SALE THIS WEEK</p>
           <p className="text-2xl">NEW COLLECTION UP TO 50% OFF</p>
 
           <button className="py-3 px-7 bg-red text-white rounded-3xl ">SHOP NOW</button>
@@ -99,18 +111,6 @@ const Home = () => {
 
 
     </section>
-    // <div className="mx-auto w-full h-full bg-background">
-    //     <Carousel />
-    //     <Services />
-
-    //     <div className="w-full flex flex-col items-center gap-3 py-12 bg-background dark:bg-principal">
-    //         <h1 className="font-bold text-principal dark:text-white">Why buy from us?</h1>
-    //         <p className="w-2/3 text-center text-slate">We strive to offer competitive prices on all our products. Additionally, we also provide special deals and promotions from time to time to help our customers save even more.</p>
-    //     </div>
-
-    //     <ProductsSlider />
-    //     <Footer />
-    // </div>
   )
 }
 
