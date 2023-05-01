@@ -16,6 +16,7 @@ module.exports = {
         '108': '27rem',
         '26': '6.4rem',
         '90': '22.5rem',
+        '130': '32.5rem',
       }
     },
     colors: {

@@ -1,8 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getAllProducts } from "../redux/actions";
-import Slider from "./Slider";
-const ProductCards = () => {
+import MultipleSlider from "./MultipleSlider";
+
+const TopSellingSlider = () => {
 
   const dispatch = useDispatch();
   const allProducts = useSelector(state => state.allProducts);
@@ -13,11 +14,10 @@ const ProductCards = () => {
 
   return (
     <section className="w-full">
-      <Slider products={allProducts} />
+      <MultipleSlider products={allProducts} />
 
     </section>
-
   )
 }
 
-export default ProductCards;
+export default TopSellingSlider;

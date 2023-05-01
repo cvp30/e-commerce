@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import ProductCards from "../../components/ProductCards";
 import Qled from "../../assets/qled.png"
 import Portable from "../../assets/portable.png";
+import { Facebook, Twitter, Instagram, Letter } from '../../icons';
+import Footer from '../../components/Footer';
 
 const Home = () => {
 
@@ -44,8 +46,9 @@ const Home = () => {
   ]
 
   return (
-    <section className="w-full h-full mx-auto py-10">
-      <div className="flex gap-8 md:gap-16 flex-wrap items-center justify-center xl:justify-between">
+    <section className="w-full h-full mx-auto pt-10">
+
+      <div className="w-[95%] mx-auto flex gap-8 md:gap-16 flex-wrap items-center justify-center xl:justify-between">
         {
           categories.map((category, key) => {
             return (
@@ -68,12 +71,12 @@ const Home = () => {
         }
       </div>
 
-      <div className="w-full text-principal pt-16 flex flex-col items-start">
+      <div className="w-[95%] mx-auto text-principal pt-16 flex flex-col items-start">
         <p className="text-3xl font-bold">NEW PRODUCTS</p>
         <ProductCards />
       </div>
 
-      <section className="w-full h-full py-6 my-14 bg-silver flex items-center justify-between">
+      <section className="w-full h-full pl-6 py-6 my-14 bg-silver flex items-center justify-between">
         <figure className="hidden md:w-1/2 lg:w-1/3 h-90 pr-4 md:flex justify-center">
           <img src={Qled} className="w-full" alt="" />
         </figure>
@@ -98,13 +101,38 @@ const Home = () => {
           <button className="py-3 px-7 bg-red text-white rounded-3xl ">SHOP NOW</button>
         </div>
 
+
         <figure className="hidden w-1/3 h-90 lg:flex justify-center items-center">
           <img src={Portable} className="h-full" alt="" />
         </figure>
 
       </section>
 
-      <p className="text-3xl font-bold">TOP SELLING</p>
+      <div className='w-full h-48 relative flex flex-col justify-around items-center border-t-2 border-t-silver'>
+        <Letter className="h-44 absolute text-silver rotate-12 left-1/4 -top-4 -z-10" />
+        <p className='text-dark text-2xl font-normal'>Sign up for the <span className='font-bold'>NEWSLETTER</span></p>
+
+        <form className='w-full md:w-130 flex flex-col md:flex-row gap-2 md:gap-0'>
+          <input className='w-full md:w-2/3 outline-none p-2 border md:border-r-0 border-silver rounded-l-full rounded-r-full md:rounded-r-none ' type="email" placeholder='Enter Your Email' />
+          <button className='w-full md:w-1/3 p-2 border border-red rounded-l-full md:rounded-l-none rounded-r-full bg-red text-white' >Subscribe</button>
+        </form>
+
+        <div className='h-10 w-36 flex justify-between items-center text-dark'>
+          <a href="" className='h-full w-10 p-2 border border-silver hover:bg-silver hover:text-red transition-all duration-300 ease-in-out'>
+            <Facebook />
+          </a>
+          <a href="" className='h-full w-10 p-2 border border-silver hover:bg-silver hover:text-red transition-all duration-300 ease-in-out'>
+            <Twitter />
+          </a>
+          <a href="" className='h-full w-10 p-2 border border-silver hover:bg-silver hover:text-red transition-all duration-300 ease-in-out'>
+            <Instagram />
+          </a>
+        </div>
+
+      </div>
+
+      <Footer />
+
 
 
     </section>

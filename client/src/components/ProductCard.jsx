@@ -3,7 +3,7 @@ import { CarShopping, Heart, Compare } from "../icons";
 
 const ProductCard = ({ image, category, title, price, rating }) => {
   return (
-    <div className=" box-border w-72 h-112 outline outline-1 outline-silver hover:outline-2 hover:outline-red relative flex flex-col group after:absolute after:w-full after:h-full after:top-0 after:-z-10 after:bg-white   transition duration-250 ease-in-out">
+    <div className=" box-border w-64 h-112 outline outline-1 outline-silver hover:outline-2 hover:outline-red relative flex flex-col group after:absolute after:w-full after:h-full after:top-0 after:-z-10 after:bg-white   transition duration-250 ease-in-out">
 
       <figure className="box-border w-full h-1/2 flex items-center justify-center">
         <img className="h-[90%] box-border " src={image} alt="" />

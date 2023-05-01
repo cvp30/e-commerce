@@ -24,7 +24,7 @@ const NavBar = () => {
         </div>
       </header>
 
-      <div className="w-[95%] max-w-screen-2xl mx-auto border">
+      <div className="w-full max-w-screen-2xl mx-auto">
         <Outlet />
 
       </div>

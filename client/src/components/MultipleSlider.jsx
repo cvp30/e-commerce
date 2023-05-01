@@ -8,7 +8,8 @@ import "swiper/css/navigation";
 import { Navigation, A11y } from "swiper";
 import ProductCard from "./ProductCard";
 
-const Slider = ({ products }) => {
+
+const MultipleSlider = ({ products }) => {
 
   const prev = useRef(null);
   const next = useRef(null);
@@ -25,7 +26,7 @@ const Slider = ({ products }) => {
       </div>
       <Swiper
         loop={true}
-
+        slidesPerView={1}
         navigation={
           {
             nextEl: next.current,
@@ -33,25 +34,7 @@ const Slider = ({ products }) => {
           }
         }
         modules={[Navigation, A11y]}
-        className="mySwiper p-2 box-border"
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-          },
-          650: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-          },
-          930: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          1300: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-        }}
+        className="mySwiper py-2 box-border border"
       >
         {
           products.map(product => {
@@ -76,4 +59,5 @@ const Slider = ({ products }) => {
   )
 }
 
-export default Slider;
+
+export default MultipleSlider;
