@@ -1,8 +1,7 @@
-import SearchBar from "../components/SearchBar/SearchBar";
-import MenuBar from "../components/MenuBar/MenuBar";
-// import Categories from "../components/Categories/Categories";
+import SearchBar from "../components/SearchBar";
+import MenuBar from "../components/MenuBar";
 import { Link, Outlet } from "react-router-dom";
-// import logo from '../assets/logo.png'
+import Footer from "../components/Footer";
 
 const NavBar = () => {
 
@@ -24,9 +23,9 @@ const NavBar = () => {
         </div>
       </header>
 
-      <div className="w-full max-w-screen-2xl mx-auto">
+      <div className=" w-full max-w-screen-2xl mx-auto">
         <Outlet />
-
+        <Footer />
       </div>
 
     </>

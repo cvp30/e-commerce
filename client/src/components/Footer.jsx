@@ -3,9 +3,9 @@ import { Letter, Map, Phone } from "../icons";
 
 const Footer = () => {
   return (
-    <section className="w-full max-w-screen-2xl h-80 bg-dark text-[#B9BABC] flex justify-center items-center border-t-4 border-red ">
+    <section className="w-full px-4 pt-2 max-w-screen-2xl h-full md:h-80 gap-5 md:gap-0 bg-dark text-[#B9BABC] flex flex-col md:flex-row justify-center items-center border-t-4 border-red ">
 
-      <div className="h-60 w-64 flex flex-col justify-start items-start gap-3 ">
+      <div className="w-full h-60 md:w-64 flex flex-col justify-start items-start gap-3">
         <h3 className="font-bold text-white">ABOUT US</h3>
         <p className="text-base tracking-wider ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iure temporibus placeat maxime.</p>
         <div className="flex w-full justify-start items-center gap-4">
@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="h-60 w-64 flex flex-col justify-start items-start gap-3">
+      <div className="h-60 w-full md:w-64 flex flex-col justify-start items-start gap-3">
         <h3 className="font-bold text-white">CATEGORIES</h3>
         <div className="flex flex-col gap-5">
           <p>Electronics</p>
@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="h-60 w-64 flex flex-col justify-start items-start gap-3">
+      <div className="h-60 w-full md:w-64 flex flex-col justify-start items-start gap-3">
         <h3 className="font-bold text-white">INFORMATION</h3>
         <div className="flex flex-col gap-5">
           <p>About Us</p>
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="h-60 w-64 flex flex-col justify-start items-start gap-3">
+      <div className="h-60 w-full md:w-64 flex flex-col justify-start items-start gap-3">
         <h3 className="font-bold text-white">SERVICE</h3>
         <div className="flex flex-col gap-5">
           <p>My Account</p>

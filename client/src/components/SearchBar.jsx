@@ -1,4 +1,4 @@
-import { Search } from "../../icons";
+import { Search } from "../icons";
 
 const SearchBar = () => {
   return (
@@ -14,14 +14,14 @@ const SearchBar = () => {
         <option value="women's clothing">women</option>
       </select>
 
-      <input 
-        type="text" 
-        placeholder="Search ..." 
+      <input
+        type="text"
+        placeholder="Search ..."
         className="outline-0 p-3 w-11/12 lg:w-7/12 bg-white rounded-r-lg rounded-l-lg lg:rounded-l-none"
       />
-      
+
       <button className='bg-inherit w-10 flex items-center justify-center h-full cursor-pointer'>
-        <Search className="h-6 text-red"/>
+        <Search className="h-6 text-red" />
       </button>
 
     </div>

@@ -1,27 +1,29 @@
-
-import Jewelery from '../../assets/jewelery.png'
-import Electronics from '../../assets/Electronics.png'
-import Men from '../../assets/Men.png'
 import { Link } from "react-router-dom";
-import ProductCards from "../../components/ProductCards";
-import Qled from "../../assets/qled.png"
-import Portable from "../../assets/portable.png";
-import { Facebook, Twitter, Instagram, Letter } from '../../icons';
-import Footer from '../../components/Footer';
+
+import Jewelery from '../assets/jewelery.png';
+import Electronics from '../assets/Electronics.png'
+import Men from '../assets/Men.png'
+import ProductCards from "../components/ProductCards";
+import Qled from "../assets/qled.png"
+import Portable from "../assets/portable.png";
+import { Facebook, Twitter, Instagram, Letter } from '../icons';
 
 const Home = () => {
 
   const categories = [
     {
       name: 'Jewelery Collection',
+      link: 'jewelery',
       img: Jewelery,
     },
     {
       name: 'Electronics Collection',
+      link: 'electronics',
       img: Electronics,
     },
     {
       name: 'Men\'s and Women\'s clothing Collection',
+      link: 'clothing',
       img: Men,
     },
 
@@ -48,7 +50,7 @@ const Home = () => {
   return (
     <section className="w-full h-full mx-auto pt-10">
 
-      <div className="w-[95%] mx-auto flex gap-8 md:gap-16 flex-wrap items-center justify-center xl:justify-between">
+      <div className="w-full lg:w-[95%] mx-auto flex gap-8 md:gap-16 flex-wrap items-center justify-center xl:justify-between">
         {
           categories.map((category, key) => {
             return (
@@ -61,7 +63,7 @@ const Home = () => {
                   <p>
                     {category.name}
                   </p>
-                  <Link to="" className="text-base font-normal">
+                  <Link to={`category/${category.link}`} className="text-base font-normal">
                     SHOP NOW &rarr;
                   </Link>
                 </div>
@@ -71,7 +73,7 @@ const Home = () => {
         }
       </div>
 
-      <div className="w-[95%] mx-auto text-principal pt-16 flex flex-col items-start">
+      <div className="w-full lg:w-[95%] mx-auto text-principal pt-16 flex flex-col items-start">
         <p className="text-3xl font-bold">NEW PRODUCTS</p>
         <ProductCards />
       </div>
@@ -131,11 +133,11 @@ const Home = () => {
 
       </div>
 
-      <Footer />
 
 
 
-    </section>
+
+    </section >
   )
 }
 
