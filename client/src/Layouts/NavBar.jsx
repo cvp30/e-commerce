@@ -11,10 +11,10 @@ const NavBar = () => {
 
         <div className="w-full px-2 md:px-0 md:w-[95%] max-w-screen-2xl h-full md:h-3/4 mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center gap-1 md:gap-0">
 
-          <p className="text-4xl text-white">
+          <Link to="/" className="text-4xl text-white">
             <span className="text-red">E</span>
             COMMERCE
-          </p>
+          </Link>
 
           <SearchBar />
 

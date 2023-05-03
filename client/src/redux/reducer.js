@@ -1,6 +1,8 @@
 
 import {
   GET_ALL_PRODUCTS,
+  GET_PRODUCTS,
+
   GET_ALL_ELECTRONICS,
   GET_ALL_JEWELERY,
   GET_ALL_MEN_CLOTHING,
@@ -9,6 +11,8 @@ import {
 
 const initialState = {
   allProducts: [],
+  products: [],
+
   allElectronics: [],
   allJewelery: [],
   allMen: [],
@@ -21,6 +25,12 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         allProducts: action.payload,
+      }
+
+    case GET_PRODUCTS:
+      return {
+        ...state,
+        products: action.payload,
       }
 
     case GET_ALL_ELECTRONICS:
