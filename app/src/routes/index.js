@@ -1,13 +1,11 @@
 const { Router } = require("express");
+const productsRouter = require("./Products");
+const categoryRouter = require("./Category");
 
 const router = Router();
 
-router.use('/', async (req, res) => {
-  res.json({ sms: "hola" })
-});
+router.use('/products', productsRouter);
 
-router.use('/users', async (req, res) => {
-  res.json({ sms: "users" })
-});
+router.use('/category', categoryRouter);
 
 module.exports = router;
