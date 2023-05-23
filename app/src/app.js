@@ -1,3 +1,4 @@
+const router = require('./routes/index')
 const express = require('express');
 const morgan = require('morgan');
 
@@ -12,8 +13,6 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use('/', async (req, res) => {
-  res.json({ sms: "hola" })
-})
+server.use('/', router)
 
 module.exports = server;
